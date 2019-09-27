@@ -1,5 +1,5 @@
 .App {
-  background-color: #282c34;
+  background-color: rgb(199, 199, 199);
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -10,10 +10,53 @@
 }
 
 .Scoreboard {
-  background-color: #282c34;
-  color: #d9cdcc;
+  background-color: rgb(199, 199, 199);
+  color: #505050;
+  position: fixed;
+  top: 5px;
+}
+
+.jumbo {
+  float: left;  
+  width: 47%;
+}
+
+.top {
+  top: 0px;
+  float: right;
+}
+
+.score {
+  font-size: calc(12px + 2vmin);
+}
+
+.name {
+ font-size: calc(10px + 2vmin);
+ font-weight: bold;
 }
 
 .AdministrationTools {
-  background-color: aqua;
+  background-color: rgb(199, 199, 199);
+  position: fixed;
+  top: 350px;
+}
+
+.form {
+  align-items: left;
+}
+
+.with-top-margin {
+  margin-top: 5x
+}
+
+.with-bottom-margin {
+  margin-bottom: 5px;
+}
+
+.with-left-margin {
+  margin-left: 5px;
+}
+
+.with-right-margin {
+  margin-right: 5px;
 }

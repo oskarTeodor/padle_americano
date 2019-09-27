@@ -1,19 +1,21 @@
 import React from 'react';
+import { underline } from 'ansi-colors';
+import { Jumbotron } from 'react-bootstrap';
 
-export class Scoreboard extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-         <div className="Scoreboard">
-             <h1>Scoreboard</h1>
-
-         </div>   
-        );
-    }
+export function Scoreboard(props) {
+    return (
+        <div className="Scoreboard">
+            {props.playerList !== underline && props.playerList.length > 0 &&
+                <div>
+                <h1>Scoreboard</h1>
+                    {props.playerList.map((element, index) => (
+                        <Jumbotron className="with-right-margin jumbo" key={index}>
+                        <div className="name">{element.name}</div>
+                        <div className="score">{element.points}p</div>
+                        </Jumbotron>
+                  ))}
+                </div>
+            }
+        </div>   
+    );
 }
-
-export default (Scoreboard)
