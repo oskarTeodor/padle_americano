@@ -35,7 +35,6 @@ export class AdministrationTools extends React.Component {
     }
 
     handleIncrementPoints() {
-        console.log(typeof this.state.playerPoints);
         this.props.incrementPoints(this.state.playerName, this.state.playerPoints);
         this.togglePointsForm(false);
     }
@@ -45,17 +44,17 @@ export class AdministrationTools extends React.Component {
           <div className="AdministrationTools">
               <div>
               <ButtonToolbar>
-                <Button aria-label="Knapp för att lägga till spelare" disabled={this.state.playerFormVisible} variant="outline-secondary" onClick={() => this.togglePlayerForm(true)}>
+                <Button className="with-left-margin with-bottom-margin" aria-label="Knapp för att lägga till spelare" disabled={(this.state.pointsFormVisible || this.props.players.length > 3)} variant="outline-secondary" onClick={() => this.togglePlayerForm(true)}>
                     Lägg till ny spelare
                 </Button>
-                <Button className="with-left-margin" aria-label="Knapp för att lägga till spelare" disabled={this.state.pointsFormVisible} variant="outline-secondary" onClick={() => this.togglePointsForm(true)}>
+                <Button className="with-left-margin with-bottom-margin" aria-label="Knapp för att lägga till spelare" disabled={this.state.pointsFormVisible} variant="outline-secondary" onClick={() => this.togglePointsForm(true)}>
                     Lägg till poäng
                 </Button>
                 </ButtonToolbar>
                 </div>
                 {this.state.playerFormVisible &&
                 <div className="with-top-margin form">
-                    <Form.Control className="with-bottom-margin" size="lg" type="text" placeholder="Spelarnamn" onChange={(evt) => this.setState({playerName: evt.target.value})}/>
+                    <Form.Control className="with-bottom-margin with-top-margin" size="lg" type="text" placeholder="Spelarnamn" onChange={(evt) => this.setState({playerName: evt.target.value})}/>
                     <ButtonToolbar>
                         <Button className="with-right-margin" aria-label="Knapp för att spara spelare" variant="outline-secondary" onClick={this.handlePlayerNameSet}>
                             Spara spelare

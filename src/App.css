@@ -10,20 +10,39 @@
 }
 
 .Scoreboard {
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(216, 216, 216);
   color: #505050;
   position: fixed;
   top: 5px;
+  padding: 5px;
+  width: 375px;
+  border-color:  rgb(184, 183, 183);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
 }
 
+
+.AdministrationTools {
+  background-color: rgb(216, 216, 216);
+  bottom: 0px;
+  position: absolute;
+  border-color:  rgb(184, 183, 183);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
 .jumbo {
-  float: left;  
+  float: left;
   width: 47%;
 }
 
 .top {
   top: 0px;
-  float: right;
+  float: left;
 }
 
 .score {
@@ -35,10 +54,10 @@
  font-weight: bold;
 }
 
-.AdministrationTools {
-  background-color: rgb(199, 199, 199);
+.position {
+  color: rgba(46, 46, 46, 0.09);
   position: fixed;
-  top: 350px;
+  font-size: 50px;
 }
 
 .form {

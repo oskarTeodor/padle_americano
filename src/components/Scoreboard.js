@@ -9,9 +9,10 @@ export function Scoreboard(props) {
                 <div>
                 <h1>Scoreboard</h1>
                     {props.playerList.map((element, index) => (
-                        <Jumbotron className="with-right-margin jumbo" key={index}>
-                        <div className="name">{element.name}</div>
-                        <div className="score">{element.points}p</div>
+                        <Jumbotron className="with-left-margin with-right-margin jumbo" key={index}>
+                            <div className="position">{index + 1}</div>
+                            <div className="name">{element.name}</div>
+                            <div className="score">{element.points}p</div>
                         </Jumbotron>
                   ))}
                 </div>

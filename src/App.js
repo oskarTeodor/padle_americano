@@ -24,6 +24,7 @@ incrementPoints(name, points) {
   const tmpArray = this.state.players;
   const player = tmpArray.find(player => player.name === name);
   player.points += points;
+  tmpArray.sort(function(a, b){return b.points-a.points});
   this.setState({players: tmpArray});
 }
 
